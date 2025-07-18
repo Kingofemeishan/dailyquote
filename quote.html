@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>每日一句</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f0f0f0;
+      padding: 40px;
+      text-align: center;
+    }
+    #quote {
+      font-size: 24px;
+      color: #333;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="quote">加载中...</div>
+
+  <script>
+    const sentences = [
+      "Be yourself; everyone else is already taken.",
+      "The only limit is the one you set yourself.",
+      "有时候你以为的归宿，其实是过渡。",
+      "不要急着让生活给予你所有答案。",
+      "愿你不慌不忙，按自己喜欢的节奏生活。"
+    ];
+
+    const today = new Date();
+    const index = today.getDate() % sentences.length;
+    document.getElementById("quote").innerText = sentences[index];
+  </script>
+</body>
+</html>
